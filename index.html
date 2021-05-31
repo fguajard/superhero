@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperHero</title>
+    <!-- Bootstrap and Ares CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/ares.css" />
+  </head>
+  <body>
+    <header id="page-header">
+      <h1 class="h1 font-w700 text-center">
+        <a class="link-sf" href="index.html">SUPERHERO</a>
+      </h1>
+    </header>
+
+    <div id="page-container" class="modern-sf">
+      <main id="page-main">
+        <div class="row">
+          <!-- Animated Circles Column -->
+          <div class="col-lg-6 col-lg-push-3 overflow-hidden push-20">
+            <div class="row"> 
+            <form id="formulario">
+
+                <div
+                class="col-xs-6 visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeInRight"
+                data-timeout="100"
+                >
+                <input class="btn btn-xl btn-block btn-sf push-10 form-control" id="valueInput" type="text" >
+                
+                
+            </div>
+            <div
+            class="col-xs-6 visibility-hidden"
+            data-toggle="appear"
+            data-class="animated fadeInLeft"
+            data-timeout="100"
+            >
+            <button class="btn btn-xl btn-block btn-sf push-10" id="buscar">
+                Buscar Heroe
+            </button>
+           </form>           
+            </div>
+            </div>
+
+            <div class="circles push-50">
+              <div
+                class="visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+              >
+                <span class="circle circle-0"></span>
+              </div>
+              <div
+                class="visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+                data-timeout="100"
+              >
+                <span class="circle circle-1"></span>
+              </div>
+              <div
+                class="visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+                data-timeout="200"
+              >
+                <span class="circle circle-2"></span>
+              </div>
+              <div
+                class="visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+                data-timeout="300"
+              >
+                <span class="circle circle-3"></span>
+              </div>
+              <div
+                class="visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+                data-timeout="400"
+              >
+                <span class="circle circle-4"></span>
+              </div>
+              <div
+                class="visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+                data-timeout="500"
+              >
+                <span class="circle circle-5"></span>
+              </div>
+              <div
+                class="visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+                data-timeout="600"
+              >
+                <span class="circle circle-6"></span>
+              </div>
+              <span
+                class="circle circles-main-content visibility-hidden"
+                data-toggle="appear"
+                data-class="animated fadeIn"
+                data-timeout="100"
+              >
+              </span>
+            </div>
+          </div>
+          <!-- COLUMNA IZQUIERDA -->
+          <div class="col-sm-6 col-lg-3 col-lg-pull-6">
+            <!-- Datos -->
+            <div class="block">
+              <div class="block-header overflow-hidden pusht-50" >
+                <h2
+                  class="block-title visibility-hidden"
+                  data-toggle="appear"
+                  data-class="animated fadeInDown"
+                >
+                  Superheroe
+                </h2>
+              </div>
+              <div class="block-content" id="divDatos" style="height: 500px; width: 100%;"></div>
+            </div>
+            <!-- Fin Datos -->           
+          </div>
+          <!-- END Left Column -->
+
+          <!-- COLUMNA DERECHA -->
+          <div class="col-sm-6 col-lg-3">
+            <!-- Estadisticas -->
+            <div class="block pusht-50">
+              <div class="block-header overflow-hidden">
+                <h2
+                  class="block-title visibility-hidden"
+                  data-toggle="appear"
+                  data-class="animated fadeInDown"
+                >
+                  ESTADISTICAS
+                </h2>
+              </div>
+              <div class="block-content overflow-hidden" id="stats" style="height: 500px; width: 100%; padding : 0"></div>
+              <!-- Fin Estadisticas -->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/plugins/jquery.appear.min.js"></script>
+    <script src="assets/js/plugins/jquery.countTo.min.js"></script>
+    <script src="assets/js/plugins/jquery.easypiechart.min.js"></script>    
+    <script src="assets/js/ares.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Page JS Code -->
+    <script>
+      jQuery(function () {
+        // Init page helpers (Appear + CountTo + Easy Pie Chart plugins)
+        Ares.initHelpers(["appear", "appear-countTo", "easy-pie-chart"]);
+      });
+    </script>
+  </body>
+</html>
