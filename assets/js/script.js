@@ -1,3 +1,4 @@
+//valida que el input sea numero 
 const validationNumber = (number) => {
     if (!number)return false;
     else return true;    
@@ -8,12 +9,14 @@ $("#formulario").on("submit",function(e){
     e.preventDefault();
 })
 
+// detona la busqueda al hacer click en el boton
 $("#buscar").on("click",function(){
     valueInput = $("#valueInput").val()
     if (!validationNumber(+valueInput) || +valueInput <= 0 ) {
         alert("Busqueda Invalida");
         return false;
-      }    
+      }
+      // llamada a la API con AJAX    
     $.ajax({
         url: "https://www.superheroapi.com/api.php/2973630296293444/" + valueInput,
         success: function({response,name,powerstats,biography,appearance,work,connections,image}){ 
@@ -24,8 +27,7 @@ $("#buscar").on("click",function(){
             $(".circle-0").css(`background`, `rgba(98, 208, 240, .02) url(${image.url}) center/98% no-repeat`)            
             //recoleccion de datos para estadisticas de superheroe
             let estadisticas = []            
-            Object.entries(powerstats).forEach(function(s){
-                console.log(s);
+            Object.entries(powerstats).forEach(function(s){                
                 estadisticas.push({
                     label: s[0],
                     y: +s[1],
@@ -58,7 +60,7 @@ $("#buscar").on("click",function(){
             chart.render()
 
             //Datos del superheroe
-
+            $("#divDatos").css("height","auto")
             $("#divDatos").html(`
             <div>
             <h4> Nombre: ${name}</h4>

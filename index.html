@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <title>SuperHero</title>
     <!-- Bootstrap and Ares CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/css/ares.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <header id="page-header">
       <h1 class="h1 font-w700 text-center">
         <a class="link-sf" href="index.html">SUPERHERO</a>
       </h1>
+      <p class="text-center" style="text-align: center;">Find your hero</p>
     </header>
 
     <div id="page-container" class="modern-sf">
@@ -22,6 +27,7 @@
         <div class="row">
           <!-- Animated Circles Column -->
           <div class="col-lg-6 col-lg-push-3 overflow-hidden push-20">
+            
             <div class="row"> 
             <form id="formulario">
 
@@ -113,42 +119,48 @@
               </span>
             </div>
           </div>
+
           <!-- COLUMNA IZQUIERDA -->
-          <div class="col-sm-6 col-lg-3 col-lg-pull-6">
-            <!-- Datos -->
-            <div class="block">
-              <div class="block-header overflow-hidden pusht-50" >
-                <h2
-                  class="block-title visibility-hidden"
-                  data-toggle="appear"
-                  data-class="animated fadeInDown"
-                >
-                  Superheroe
-                </h2>
-              </div>
-              <div class="block-content" id="divDatos" style="height: 500px; width: 100%;"></div>
+          <section class="datos">
+              <div class="col-sm-6 col-lg-3 col-lg-pull-6">
+                  <!-- Datos -->
+                  <div class="block">
+                      <div class="block-header overflow-hidden pusht-50" >
+                          <h2
+                          class="block-title visibility-hidden"
+                          data-toggle="appear"
+                          data-class="animated fadeInDown"
+                          >
+                          Superhero
+                        </h2>
+                    </div>
+                    <div class="block-content" id="divDatos" style="height: 500px; width: 100%;"></div>
+                </div>
+                <!-- Fin Datos -->           
             </div>
-            <!-- Fin Datos -->           
-          </div>
-          <!-- END Left Column -->
+        </section>
+          
 
           <!-- COLUMNA DERECHA -->
-          <div class="col-sm-6 col-lg-3">
-            <!-- Estadisticas -->
-            <div class="block pusht-50">
-              <div class="block-header overflow-hidden">
-                <h2
-                  class="block-title visibility-hidden"
-                  data-toggle="appear"
-                  data-class="animated fadeInDown"
-                >
-                  ESTADISTICAS
-                </h2>
-              </div>
-              <div class="block-content overflow-hidden" id="stats" style="height: 500px; width: 100%; padding : 0"></div>
-              <!-- Fin Estadisticas -->
+          <section class="Estadisticas">
+              <div class="col-sm-6 col-lg-3">
+                  <!-- Estadisticas -->
+                  <div class="block pusht-50">
+                      <div class="block-header overflow-hidden">
+                          <h2
+                          class="block-title visibility-hidden"
+                          data-toggle="appear"
+                          data-class="animated fadeInDown"
+                          >
+                          ESTADISTICAS
+                        </h2>
+                    </div>
+                    <div class="block-content overflow-hidden" id="stats" style="height: 500px; width: 100%; padding : 0"></div>
+                    <!-- Fin Estadisticas -->
+                </div>
             </div>
-          </div>
+        </section>
+
         </div>
       </main>
     </div>
